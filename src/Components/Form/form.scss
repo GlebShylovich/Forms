@@ -1,0 +1,124 @@
+.modal {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(-100%);
+    position: relative;
+    animation-duration: 0.5s;
+    animation-name: slideIn;
+    animation-fill-mode: forwards;
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .content-modal {
+        background-color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        width: 100%;
+
+        & h2{
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        & div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 20px;
+            padding-bottom: 20px;
+        }
+
+        input {
+            width: 277px;
+            border-radius: 10px;
+            background: #F5F5F5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 34px;
+            outline: none;
+            border: none;
+            color: #000;
+
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+
+
+            &::placeholder {
+                color: #000;
+
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: uppercase;
+            }
+
+        }
+
+        .adress {
+            padding: 10px 0 53px 34px;
+            margin-bottom: 20px;
+            resize: none;
+            width: 575px;
+            border-radius: 10px;
+            background: #F5F5F5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            border: none;
+            color: #000;
+
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+
+            &::placeholder {
+                color: #000;
+
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: uppercase;
+            }
+        }
+
+        button {
+            width: 100%;
+            border-radius: 45px;
+            background: #181818;
+            color: white;
+        }
+    }
+}
