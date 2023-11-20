@@ -29,10 +29,10 @@ function App() {
     setButtonVisible(false)
   }
 
-  return <div className='block'>
+  return <div>
     {isOpenModal &&
       <div className='modal' onClick={(e) => {
-        setIsOpenModal(false)
+        setIsOpenModal(true)
         e.stopPropagation()}}>
     <div className="content-modal">
       <h2>КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
@@ -46,7 +46,7 @@ function App() {
     <span>СОЗДАТЬ ПОЛЬЗОВАТЕЛЯ</span>
   </button>)
 }
-<button className="viewPosts">ПОКАЗАТЬ/СКРЫТЬ</button>
+
 {
   arr.map((item, index) => (
     <Post item={item} key={index} delPost={delPost} />
